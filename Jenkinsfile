@@ -1,14 +1,14 @@
 pipeline {
     agent any
     tools { 
-        maven 'MAVEN_3_9_1'  
+        maven 'Maven_Jenkins'  
     }
 	
     stages {
         stage ('Compile Stage') {
 
             steps {
-                withMaven(maven : 'MAVEN_3_9_1') {
+                withMaven(maven : 'Maven_Jenkins') {
                     bat 'mvn clean compile'
                 }
             }
@@ -17,7 +17,7 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
-                withMaven(maven : 'MAVEN_3_9_1') {
+                withMaven(maven : 'Maven_Jenkins') {
                     bat 'mvn test'
                 }
             }
