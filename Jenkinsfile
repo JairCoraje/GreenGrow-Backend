@@ -9,7 +9,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'MAVEN_3_9_1') {
-                    sh 'mvn clean compile'
+                    bat 'mvn clean compile'
                 }
             }
         }
@@ -18,7 +18,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'MAVEN_3_9_1') {
-                    sh 'mvn test'
+                    bat 'mvn test'
                 }
             }
         }
