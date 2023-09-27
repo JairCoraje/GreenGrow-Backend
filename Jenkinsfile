@@ -13,11 +13,7 @@ pipeline {
                 }
             }
         }
-	    stage('Clean Maven Cache') {
-    steps {
-        sh 'mvn clean dependency:purge-local-repository'
-    }
-}
+
 
         stage ('Testing Stage') {
 
